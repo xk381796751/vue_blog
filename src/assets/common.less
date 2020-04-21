@@ -29,8 +29,20 @@ body,
 
 
 .el-button:hover {
-	color: #fff;
-	background-color: @themeLighterColor;
+    color: #fff;
+    background-color: @themeLighterColor;
+}
+
+input {
+    line-height: 40px;
+    border: 1px solid #eaeaea;
+    padding: 0 10px;
+    border-radius: 4px;
+    outline: none;
+}
+
+input:focus {
+    border-color: @themeLighterColor;
 }
 
 .el-input.is-active .el-input__inner,

@@ -1,7 +1,18 @@
+import { mapActions } from 'vuex'
 export default {
 	data() {
 		return {
-			msg: '登录页面'
+			username: '',
+			password: ''
+		}
+	},
+	methods: {
+		...mapActions(['login']),
+
+		onLogin() {
+			this.login({ username: this.username, password: this.password }).then((res) => {
+				this.$router.push('/')
+			})
 		}
 	}
 }
