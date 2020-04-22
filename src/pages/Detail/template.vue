@@ -4,7 +4,7 @@
 			<img :src="blogData.user.avatar" :alt="blogData.user.username" :title="blogData.user.username" class="avatar">
 			<h3>{{blogData.title}}</h3>
 			<p>
-				<router-link :to="`/user/${blogData.user.id}`">{{blogData.user.username}}</router-link> 发布于 {{blogData.createdAt}}
+				<router-link :to="`/user/${blogData.user.id}`">{{blogData.user.username}}</router-link> 发布于{{friendlyDate(blogData.createdAt)}}
 			</p>
 		</section>
 		<section class="article" v-html="markdown"></section>
